@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flexbox - Pink & Kuning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffeef8; /* latar belakang pink muda */
+        }
+        .container {
+            display: flex;
+            gap: 10px;
+            padding: 20px;
+        }
+        .item {
+            background: linear-gradient(135deg, pink, yellow);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            flex-grow: 1;
+            flex-basis: 150px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .item.large {
+            flex-grow: 2;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="item">
+        <img src="https://placekitten.com/400/300" alt="Gambar Kucing Lucu" />
+    </div>
+
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item large">Item 2 (Lebih Besar)</div>
+        <div class="item">Item 3</div>
+    </div>
+    <div class="container">
+        <div class="item">Item 4</div>
+        <div class="item large">Item 5 (Lebih Besar)</div>
+        <div class="item">Item 6</div>
+    </div>
+</body>
+</html>
